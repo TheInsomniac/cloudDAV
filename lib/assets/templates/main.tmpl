@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Index for {{title}}/</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  {{#if enableAssets}}
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="{{favicon}}" type="image/vnd.microsoft.icon" />
+  <link rel="icon" href="{{favicon}}" type="image/x-icon" />
+  <link rel="stylesheet" href="{{css}}" type="text/css" />
+  {{/if}}
+</head>
+
+<body>
+  <div id="fade"></div>
+  <div class="box box-breadcrumbs">
+    <div class="box-header">
+      <div class="box-header-content">
+        <div id="breadcrumbs" class="breadcrumbs">
+          <a href="/">
+            Root
+          </a>
+          {{#each breadcrumb}}
+          <a href="{{breadcrumbs}}">
+            {{this}}
+          </a>
+          {{/each}}
+        </div>
+        <div id="actions">
+          <button id="btnNew">New Folder</button>
+          <button id="btnUp">Upload File</button>
+        </div>
+      </div>
+    </div>
+    <div class="box-content clearfix">
+      <table cellspacing="0">
+        <tr>
+          <th id="name">Name</th>
+          <th id="type">Type</th>
+          <th id="size">Size</th>
+          <th id="modified">Last modified</th>
+        </tr>
+        {{#if path}}
+        <tr>
+          <td>
+            <a href="{{parentPath}}" class="parent">
+              ..
+            </a>
+          </td>
+          <td>[parent]</td>
+          <td></td>
+          <td></td>
+        </tr>
+        {{/if}}
+        {{#each entries}}
+        <tr>
+          <td>
+            <a href="{{this.href}}" {{#if this.class}}class="{{this.class}}"{{/if}}>
+              {{this.name}}
+            </a>
+          </td>
+          <td>{{this.type}}</td>
+          <td>{{this.size}}</td>
+          <td>{{this.lastmodified}}</td>
+        </tr>
+        {{/each}}
+      </table>
+    </div>
+  </div>
+  {{#if enablePost}}
+  <ul id="contextMenu">
+    <li class="nav-header">File</li>
+    <li id="cmenuDownload">
+      <a>Download</a>
+    </li>
+    <li class="divider"></li>
+    <li class="nav-header">Edit</li>
+    <li id="cmenuCopy">
+      <a>Copy</a>
+    </li>
+    <li id="cmenuRename">
+      <a>Move/Rename</a>
+    </li>
+    <li id="cmenuDelete">
+      <a>Delete</a>
+    </li>
+    <li class="divider"></li>
+    <li id="cmenuCancel">
+      <a>Cancel</a>
+    </li>
+  </ul>
+  </ul>
+  <div id="newFolder">
+    <span class="overlayTitle">Create a Folder</span>
+    <form method="post" action="">
+      <input type="hidden" name="jsdavAction" value="mkcol" />
+      <input id="foldername" type="text" name="name" placeholder="Folder Name" autofocus/>
+      <input type="submit" value="create" />
+    </form>
+  </div>
+  <div id="uploadFile">
+    <span class="overlayTitle">Upload a File</span>
+    <form method="post" action="" enctype="multipart/form-data">
+      <input type="hidden" name="jsdavAction" value="put" />
+      <input id="filename" type="text" name="name" placeholder="Name (optional)" />
+      <input id="filechooser" type="file" name="file"/>
+      <input type="submit" value="upload" />
+    </form>
+  </div>
+  <section class="modal">
+    <div class="modal-inner">
+      <div class="modal-content">
+        <img src=""/>
+      </div>
+      <div class="modal-footer">
+        <a href="" download="">
+          Download
+        </a>
+      </div>
+    </div>
+  </section>
+  <script src="{{script}}" type="text/javascript"></script>
+  {{/if}}
+</body>
+</html>

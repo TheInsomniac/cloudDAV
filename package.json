@@ -1,0 +1,31 @@
+{
+  "name": "cloudDAV",
+  "version": "0.0.1",
+  "description": "Browser based web-frontend to jsDAV",
+  "main": "server.js",
+  "dependencies": {
+    "handlebars": "^2.0.0-alpha.4",
+    "jsDAV": "mikedeboer/jsDAV"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheInsomniac/cloudDAV.git"
+  },
+  "keywords": [
+    "jsDAV",
+    "webdav",
+    "cloudDAV",
+    "nodejs",
+    "node.js"
+  ],
+  "author": "The Insomniac",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheInsomniac/cloudDAV/issues"
+  },
+  "homepage": "https://github.com/TheInsomniac/cloudDAV"
+}

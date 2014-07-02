@@ -1,0 +1,17 @@
+{
+  "devel": true,
+  "strict": true,
+  "jquery": true,
+  "node": true,
+  "browser": true,
+  "esnext": true,
+  "globals": {},
+  "globalstrict": false,
+  "quotmark": true,
+  "smarttabs": true,
+  "trailing": true,
+  "undef": true,
+  "indent":2,
+  "unused": true,
+  "sub":true
+}

@@ -1,0 +1,710 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+.clearfix:after {
+    clear: both;
+}
+html,
+body {
+    font-size: 100%;
+    background-color: #f7f7f7;
+    font-family: 'Open Sans', sans-serif;
+}
+.box {
+    border: 1px solid #d9d6d6;
+    width: 100%;
+}
+.box .box-header {
+    font-weight: 500;
+    font-style: normal;
+    background: #f7f7f7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f7f7f7));
+    background: -webkit-linear-gradient(top, #fff, #f7f7f7);
+    background: linear-gradient(top, #fff, #f7f7f7);
+    text-transform: uppercase;
+    height: 45px;
+    font-size: 16px;
+    border-bottom: 1px solid #d9d6d6;
+}
+.box .box-header .box-header-content {
+    padding: 12px 20px;
+    font-weight: 700;
+    position: relative;
+}
+.box .box-content {
+    width: 97%;
+    margin: 20px auto;
+    background: #fff;
+}
+.box.box-breadcrumbs .box-header {
+    height: auto;
+}
+.box.box-breadcrumbs .box-header-content {
+    padding: 0;
+}
+.breadcrumbs a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 18px 8px 10px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #a3a9ab;
+    text-shadow: 0 1px 0 #FFF;
+    -webkit-transition: 300ms color;
+    transition: 300ms color;
+}
+.breadcrumbs a:after {
+    display: block;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: url('/?jsdavAction=asset&assetName=icons/breadcrumb.png') no-repeat center right;
+}
+.breadcrumbs a:hover {
+    color: #50b1ff;
+    text-decoration: none;
+    background: none;
+}
+table {
+    border: 1px solid #d9d6d6;
+    width: 100%;
+    table-layout: fixed;
+}
+th,
+td {
+    padding: 0.1em 0.5em;
+}
+td {
+    color: #777;
+}
+td > a {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th {
+    text-align: left;
+    font-weight: 500;
+    background: #eee;
+    border-bottom: 1px solid #d9d6d6;
+    color: #333;
+}
+#name {
+    width: 50%;
+}
+#type {
+    width: 20%;
+}
+#size {
+    width: 10%;
+}
+#modified {
+    width: 20%;
+}
+tbody tr:first-child {
+    /*display: none;*/
+}
+tr:nth-child(2n) {
+    background: #f7f7f7;
+}
+tr:hover {
+    background: #eee;
+}
+a {
+    color: #777;
+    text-decoration: none;
+}
+a:hover {
+    color: #333;
+}
+input[type="text"] {
+    display: block;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 0 10px;
+    border: 1px solid #777;
+    border-radius: 3px;
+    width: 94%;
+}
+input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+}
+#actions {
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
+input[type="submit"] {
+    margin-top: 7px;
+    margin-left: 10px;
+    text-transform: capitalize;
+}
+button,
+input[type="submit"] {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e8e9ea));
+    background: -moz-linear-gradient(center top, #ffffff 0%, #e8e9ea 100%);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    text-shadow: 1px 1px 0px #ffffff;
+    padding: 7px 8px;
+    display: inline-block;
+    border-color: #c9cdd1;
+    border-width: 1px;
+    border-style: solid;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 12px;
+    line-height: 12px;
+    color: #455868;
+    font-weight: bold;
+}
+button:hover,
+input[type="submit"]:hover {
+    -webkit-box-shadow: 0px 0px 3px 1px #c9cdd1;
+    -moz-box-shadow: 0px 0px 3px 1px #c9cdd1;
+    box-shadow: 0px 0px 3px 1px #c9cdd1;
+}
+#fade {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: black;
+    -moz-opacity: 0.7;
+    opacity: .70;
+    filter: alpha(opacity=70);
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+}
+.overlayTitle {
+    display: block;
+    padding: 3px 15px;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #999;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    text-align: center;
+}
+#newFolder {
+    display: none;
+    position: absolute;
+    left: 35%;
+    top: 25%;
+    width: 30%;
+    height: 105px;
+    z-index: 100;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    text-align: center;
+    *border-right-width: 2px;
+    *border-bottom-width: 2px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+#uploadFile {
+    display: none;
+    position: absolute;
+    left: 35%;
+    top: 25%;
+    width: 30%;
+    height: 130px;
+    z-index: 100;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    text-align: center;
+    *border-right-width: 2px;
+    *border-bottom-width: 2px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+input#filechooser {
+    display: block;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.modal {
+  display: none;
+}
+.modal-inner {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    z-index: 100;
+    margin-left: -325px;
+    width: 650px;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    border: 10px solid #f7f7f7;
+    box-sizing: content-box;
+    border-radius: 6px;
+}
+.modal-content {
+    position: relative;
+    max-height: 400px;
+    max-height: 80vh;
+    overflow-x: hidden;
+    /*overflow-y: auto;*/
+    -webkit-overflow-scrolling: touch;
+}
+.modal-inner img {
+    height: auto;
+    min-height: 300px;
+    width: auto;
+    max-width: 100%;
+    display: block;
+}
+.modal-footer {
+    position: absolute;
+    bottom: 0;
+    background: #f7f7f7;
+    padding-left: 5px;
+    padding-right: 10px;
+    padding-top: 2px;
+    border-top-right-radius: 6px;
+}
+.modal-footer > a {
+  position: relative;
+  top: 1px;
+}
+#contextMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -9999px;
+    float: left;
+    z-index: 1000;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-size: 14px;
+    *border-right-width: 2px;
+    *border-bottom-width: 2px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    text-align: left;
+}
+#contextMenu .nav-header {
+    display: block;
+    padding: 3px 15px;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #999;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+}
+#contextMenu .divider {
+    height: 1px;
+    margin: 9px 1px;
+    overflow: hidden;
+    background-color: #e5e5e5;
+    border-bottom: 1px solid #ffffff;
+    box-sizing: content-box;
+}
+#contextMenu a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 20px;
+    color: #333333;
+    white-space: nowrap;
+    text-decoration: none;
+}
+#contextMenu li > a:hover,
+#contextMenu li > a:focus {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #0088cc;
+    background-color: #0081c2;
+    background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
+    background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
+    background-image: -o-linear-gradient(top, #0088cc, #0077b3);
+    background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+    background-repeat: repeat-x;
+    filter: progid: dximagetransform.microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);
+}
+#contextMenu:before {
+    position: absolute;
+    top: -7px;
+    left: 9px;
+    display: inline-block;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #ccc;
+    border-left: 7px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    content: '';
+}
+#contextMenu:after {
+    position: absolute;
+    top: -6px;
+    left: 10px;
+    display: inline-block;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #ffffff;
+    border-left: 6px solid transparent;
+    content: '';
+}
+/*table a::selection {
+  background: transparent;
+}*/
+
+@media screen and (max-width: 1024px) {
+    .box .box-content {
+        padding-top: 20px;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+address {
+    float: right;
+    font-size: 0.7em;
+}
+tbody a[href^="/"]:before {
+    content: "";
+    padding: 0 25px 0 0;
+    background: url('/?jsdavAction=asset&assetName=mimeicons/GenericFolderIcon.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href*="."]:before {
+    content: "";
+    padding: 0 25px 0 0;
+    background: url('/?jsdavAction=asset&assetName=mimeicons/_blank.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$="/"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/GenericFolderIcon.png') left center no-repeat;
+    background-size: contain;
+}
+/* A P P L I C A T I O N
+  ~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+tbody a[href$=".doc"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/doc.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".pdf"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/pdf.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".pgp"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/_page.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".xml"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/xml.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".xls"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/xls.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".ppt"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/ppt.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".7z"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/zip.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".torrent"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/_blank.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".iso"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/iso.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".cue"]:before,
+tbody a[href$=".bin"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/iso.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".deb"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/deb.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".exe"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/exe.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".swf"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/flv.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".tgz"]:before,
+tbody a[href$=".tar.gz"]:before,
+tbody a[href$=".tar.xz"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/tgz.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".xpi"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/xpi.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".apk"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/_blank.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".bat"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/_page.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".jar"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/java.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".pl"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/_page.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".php"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/php.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".rar"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/rar.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".rpm"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/rpm.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".rb"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/rb.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".tar"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/tar.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".zip"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/zip.png') left center no-repeat;
+    background-size: contain;
+}
+/* A U D I O
+  ~~~~~~~~~~~~*/
+
+tbody a[href$=".m3u"]:before,
+tbody a[href$=".mp3"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/mp3.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".mpeg"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/mpeg.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".wma"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/mp3.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".ogg"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/ogg.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".wav"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/wav.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".flac"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/mp3.png') left center no-repeat;
+    background-size: contain;
+}
+/* I M A G E
+  ~~~~~~~~~~~~*/
+
+tbody a[href$=".bmp"]:before,
+tbody a[href$=".svg"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/bmp.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".gif"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/gif.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".jpg"]:before,
+tbody a[href$=".jpeg"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/jpg.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".png"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/png.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".tiff"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/tiff.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".ico"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/_blank.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".psd"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/psd.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".xcf"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/_blank.png') left center no-repeat;
+    background-size: contain;
+}
+/* T E X T
+  ~~~~~~~~~~*/
+
+tbody a[href$=".css"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/css.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".htm"]:before,
+tbody a[href$=".html"]:before,
+tbody a[href$=".md"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/html.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".txt"]:before,
+tbody a[href$=".json"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/txt.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".csv"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/_page.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".conf"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/_page.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".rtf"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/rtf.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".bak"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/_blank.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".c"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/c.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".cpp"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/cpp.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href~="INSTALL"]:before,
+tbody a[href~="README"]:before,
+tbody a[href~="CHANGELOG"]:before,
+tbody a[href~="COPYING"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/_PAGE.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".java"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/java.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".js"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/js.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".h"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/h.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".py"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/py.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".sh"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/_blank.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".sql"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/sql.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".xml"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/xml.png') left center no-repeat;
+    background-size: contain;
+}
+/* V I D E O
+  ~~~~~~~~~~~~*/
+
+tbody a[href$=".avi"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/avi.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".mp4"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/mp4.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".mkv"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/mkv.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".divx"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/avi.png') left center no-repeat;
+    background-size: contain;
+}
+tbody a[href$=".wmv"]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/wmv.png') left center no-repeat;
+    background-size: contain;
+}
