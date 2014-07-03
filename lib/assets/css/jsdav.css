@@ -105,7 +105,7 @@ th {
     color: #333;
 }
 #name {
-    width: 50%;
+    width: 49%;
 }
 #type {
     width: 20%;
@@ -114,7 +114,7 @@ th {
     width: 10%;
 }
 #modified {
-    width: 20%;
+    width: 21%;
 }
 tbody tr:first-child {
     /*display: none;*/
@@ -243,7 +243,7 @@ input[type="submit"]:hover {
     left: 35%;
     top: 25%;
     width: 30%;
-    height: 130px;
+    height: 210px;
     z-index: 100;
     padding: 5px 0;
     margin: 2px 0 0;
@@ -269,8 +269,23 @@ input#filechooser {
     margin-left: 10px;
     margin-top: 5px;
 }
+ul#fileInfo {
+    list-style: none;
+    list-style-type: none;
+    text-align: left;
+    padding: 0 0 0 15px;
+}
+#fileInfo div {
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#fileInfo strong {
+    color: #333;
+}
 .modal {
-  display: none;
+    display: none;
 }
 .modal-inner {
     position: absolute;
@@ -310,8 +325,8 @@ input#filechooser {
     border-top-right-radius: 6px;
 }
 .modal-footer > a {
-  position: relative;
-  top: 1px;
+    position: relative;
+    top: 1px;
 }
 #contextMenu {
     display: none;
