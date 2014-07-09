@@ -214,59 +214,42 @@ input[type="submit"]:hover {
     text-transform: uppercase;
     text-align: center;
 }
+.overlay {
+  position: absolute;
+  left: 35%;
+  top: 25%;
+  width: 30%;
+  z-index: 100;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  text-align: center;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
 #newFolder {
     display: none;
-    position: absolute;
-    left: 35%;
-    top: 25%;
-    width: 30%;
     height: 105px;
-    z-index: 100;
-    padding: 5px 0;
-    margin: 2px 0 0;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    font-size: 14px;
-    text-align: center;
-    *border-right-width: 2px;
-    *border-bottom-width: 2px;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box;
 }
 #uploadFile {
     display: none;
-    position: absolute;
-    left: 35%;
-    top: 25%;
-    width: 30%;
     height: 210px;
-    z-index: 100;
-    padding: 5px 0;
-    margin: 2px 0 0;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    font-size: 14px;
-    text-align: center;
-    *border-right-width: 2px;
-    *border-bottom-width: 2px;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box;
+}
+#audioPlayer {
+    display: none;
+    height: 90px;
 }
 input#fileChooser {
     display: block;
@@ -282,7 +265,7 @@ input#fileChooser {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-#fileInfo strong {
+#fileInfo span {
     color: #333;
 }
 progress[value] {
@@ -691,7 +674,8 @@ tbody a[href$=".md"]:before {
     background-size: contain;
 }
 tbody a[href$=".txt"]:before,
-tbody a[href$=".json"]:before {
+tbody a[href$=".json"]:before,
+tbody a[href$=".nfo"]:before {
     background: url('/?jsdavAction=asset&assetName=mimeicons/txt.png') left center no-repeat;
     background-size: contain;
 }

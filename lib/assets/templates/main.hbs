@@ -7,7 +7,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width" />
   {{#if enableAssets}}
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="{{favicon}}" type="image/vnd.microsoft.icon" />
   <link rel="icon" href="{{favicon}}" type="image/x-icon" />
   <link rel="stylesheet" href="{{css}}" type="text/css" />
@@ -93,7 +93,7 @@
     </li>
   </ul>
   </ul>
-  <div id="newFolder">
+  <div id="newFolder" class="overlay">
     <span class="overlayTitle">Create a Folder</span>
     <form method="post" action="">
       <input type="hidden" name="jsdavAction" value="mkcol" />
@@ -101,7 +101,7 @@
       <input type="submit" value="Create" />
     </form>
   </div>
-  <div id="uploadFile">
+  <div id="uploadFile" class="overlay">
     <span class="overlayTitle">Upload a File</span>
     <form method="post" action="" enctype="multipart/form-data" id="fileForm">
       <input type="hidden" name="jsdavAction" value="put" />
@@ -112,16 +112,21 @@
     </form>
     <div id="fileInfo">
         <div>
-          <strong>Name:</strong>
+          <span>Name:</span>
         </div>
         <div>
-          <strong>Size:</strong>
+          <span>Size:</span>
         </div>
         <div>
-          <strong>Type:</strong>
+          <span>Type:</span>
         </div>
     </div>
     <progress min="0" max="100" value="0">0% complete</progress>
+  </div>
+  <div id="audioPlayer" class="overlay">
+    <span class="overlayTitle">Playing...</span>
+    <div>
+    </div>
   </div>
   <section class="modal">
     <div class="modal-inner">
