@@ -20,6 +20,8 @@ body {
     font-size: 100%;
     background-color: #f7f7f7;
     font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
 }
 .box {
     border: 1px solid #d9d6d6;
@@ -140,7 +142,7 @@ input[type="text"] {
     -o-transition: all 0.30s ease-in-out;
     outline: none;
     padding: 3px 0px 3px 3px;
-    margin: 5px 1px 0 10px;
+    margin: 5px 0 0 10px;
     border: 1px solid #777;
     border-radius: 3px;
     width: 94%;
@@ -152,7 +154,7 @@ input:focus {
 }
 #actions {
     position: absolute;
-    top: 0;
+    top: 2px;
     right: 15px;
 }
 input[type="submit"] {
@@ -179,6 +181,8 @@ input[type="submit"] {
     line-height: 12px;
     color: #455868;
     font-weight: bold;
+    text-transform: none;
+    height: 28px;
 }
 button:hover,
 input[type="submit"]:hover {
@@ -264,18 +268,15 @@ input[type="submit"]:hover {
     -moz-background-clip: padding;
     background-clip: padding-box;
 }
-input#filechooser {
+input#fileChooser {
     display: block;
     margin-left: 10px;
     margin-top: 5px;
 }
-ul#fileInfo {
-    list-style: none;
-    list-style-type: none;
-    text-align: left;
-    padding: 0 0 0 15px;
-}
 #fileInfo div {
+    padding: 0 0 0 15px;
+    margin: 0;
+    text-align: left;
     color: #999;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -284,6 +285,58 @@ ul#fileInfo {
 #fileInfo strong {
     color: #333;
 }
+progress[value] {
+  background-color: #eee;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 3px;
+  width: 94%;
+  height: 1rem;
+  visibility: hidden;
+}
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 3px;
+}
+progress[value]::-webkit-progress-value {
+  background-image:
+	   -webkit-linear-gradient(-45deg,
+	                           transparent 33%, rgba(0, 0, 0, .1) 33%,
+	                           rgba(0,0, 0, .1) 66%, transparent 66%),
+	   -webkit-linear-gradient(top,
+	                           rgba(255, 255, 255, .25),
+	                           rgba(0, 0, 0, .25)),
+	   -webkit-linear-gradient(left, #555, #777);
+
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+progress[value]::-moz-progress-bar {
+  background-image:
+    -moz-linear-gradient(
+      135deg,
+      transparent 33%,
+      rgba(0, 0, 0, 0.1) 33%,
+      rgba(0, 0, 0, 0.1) 66%,
+      transparent 66%
+    ),
+    -moz-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0.25),
+      rgba(0, 0, 0, 0.25)
+    ),
+    -moz-linear-gradient(
+      left,
+      #555,
+      #777
+    );
+
+  border-radius: 2px;
+  background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
 .modal {
     display: none;
 }
@@ -436,19 +489,19 @@ address {
     float: right;
     font-size: 0.7em;
 }
-tbody a[href^="/"]:before {
-    content: "";
-    padding: 0 25px 0 0;
-    background: url('/?jsdavAction=asset&assetName=mimeicons/GenericFolderIcon.png') left center no-repeat;
-    background-size: contain;
-}
-tbody a[href*="."]:before {
+tbody a[href]:before {
     content: "";
     padding: 0 25px 0 0;
     background: url('/?jsdavAction=asset&assetName=mimeicons/_blank.png') left center no-repeat;
     background-size: contain;
 }
-tbody a[href$="/"]:before {
+/*tbody a[href*="."]:before {
+    background: url('/?jsdavAction=asset&assetName=mimeicons/_blank.png') left center no-repeat;
+    background-size: contain;
+}*/
+tbody a[href$="/"]:before,
+tbody a[href].parent:before,
+tbody a[href].folder:before {
     background: url('/?jsdavAction=asset&assetName=mimeicons/GenericFolderIcon.png') left center no-repeat;
     background-size: contain;
 }
@@ -508,6 +561,7 @@ tbody a[href$=".swf"]:before {
     background: url('/?jsdavAction=asset&assetName=mimeicons/flv.png') left center no-repeat;
     background-size: contain;
 }
+tbody a[href$=".gz"]:before,
 tbody a[href$=".tgz"]:before,
 tbody a[href$=".tar.gz"]:before,
 tbody a[href$=".tar.xz"]:before {

@@ -1,6 +1,6 @@
 {
   "name": "cloudDAV",
-  "version": "0.0.1",
+  "version": "0.0.7",
   "description": "Browser based web-frontend to jsDAV",
   "main": "server.js",
   "dependencies": {

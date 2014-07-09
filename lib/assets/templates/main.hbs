@@ -98,19 +98,19 @@
     <form method="post" action="">
       <input type="hidden" name="jsdavAction" value="mkcol" />
       <input id="foldername" type="text" name="name" placeholder="Folder Name" autofocus/>
-      <input type="submit" value="create" />
+      <input type="submit" value="Create" />
     </form>
   </div>
   <div id="uploadFile">
     <span class="overlayTitle">Upload a File</span>
-    <form method="post" action="" enctype="multipart/form-data">
+    <form method="post" action="" enctype="multipart/form-data" id="fileForm">
       <input type="hidden" name="jsdavAction" value="put" />
       <input id="filename" type="text" name="name" placeholder="Name (optional)" />
-      <input id="filechooser" type="file" name="file"/>
-      <input type="submit" value="upload" />
+      <input id="fileChooser" type="file" name="file"/>
+      <!-- <input type="submit" value="upload" /> -->
+      <input type="submit" value="Upload" onclick="return uploadFile(this.form);">
     </form>
-    <ul id="fileInfo">
-      <li>
+    <div id="fileInfo">
         <div>
           <strong>Name:</strong>
         </div>
@@ -120,8 +120,8 @@
         <div>
           <strong>Type:</strong>
         </div>
-      </li>
-    </ul>
+    </div>
+    <progress min="0" max="100" value="0">0% complete</progress>
   </div>
   <section class="modal">
     <div class="modal-inner">

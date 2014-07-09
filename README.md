@@ -6,7 +6,7 @@ With plugin enhancements to make the webgui more usable as a "cloud" frontened.
 The entire subset of jsDAV's backend remains unchanged so all functionality remains.  
 
 ## Modifications by The Insomniac  
-###Enhancements for a more "cloud storage"-like interface.  
+### Enhancements for a more "cloud storage"-like interface.  
 
 * Major overhaul to the page displayed via a browser
   * Modern look and feel with mime type icons and modals for creating new files  
@@ -17,6 +17,7 @@ The entire subset of jsDAV's backend remains unchanged so all functionality rema
 * Added image preview modal  
 * Moved all html creation from the JavaScript source to an external handlebars template.  
   * If anyone can suggest something a little bit faster then please do!  
+* Upload progress bar
 
 ![Main](https://raw.githubusercontent.com/TheInsomniac/cloudDAV/master/lib/assets/screenshots/cloudDav1.png)  
 ![Folder](https://raw.githubusercontent.com/TheInsomniac/cloudDAV/master/lib/assets/screenshots/cloudDav2.png)  
